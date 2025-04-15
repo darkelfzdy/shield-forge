@@ -36,3 +36,6 @@ graph TD
 | 兼容性         | Chrome/Firefox/Safari最新3个版本 |
 | 安全性         | CSP3合规，XSS防护         |
 | 可访问性       | WCAG 2.1 AA标准          |
+
+## 其他说明
+这是一个测试项目，主要是测试AI编写网页的能力，和code-server端口转发的能力。
