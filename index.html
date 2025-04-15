@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shield Forge - 密码生成器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Shield Forge 密码工坊</h1>
+        
+        <div class="config-panel">
+            <div class="input-group">
+                <label>密码长度 (8-64):</label>
+                <input type="number" id="length" min="8" max="64" value="16">
+            </div>
+            
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="uppercase" checked> 大写字母 (A-Z)</label>
+                <label><input type="checkbox" id="lowercase" checked> 小写字母 (a-z)</label>
+                <label><input type="checkbox" id="numbers" checked> 数字 (0-9)</label>
+                <label><input type="checkbox" id="symbols" checked> 符号 (!@#$%)</label>
+            </div>
+
+            <div class="advanced-options">
+                <label><input type="checkbox" id="excludeSimilar"> 排除相似字符 (如1lI, 0O)</label>
+                <label><input type="checkbox" id="saveMode"> OWASP合规模式</label>
+            </div>
+        </div>
+
+        <button id="generateBtn">生成安全密码</button>
+
+        <div class="result-panel">
+            <div class="password-display">
+                <input type="text" id="password" readonly>
+                <button class="copy-btn" onclick="copyPassword()">📋</button>
+            </div>
+            
+            <div class="strength-meter">
+                <div class="strength-bar"></div>
+                <div class="strength-labels">
+                    <span>弱</span>
+                    <span>中</span>
+                    <span>强</span>
+                    <span>极强</span>
+                </div>
+            </div>
+            
+            <div class="safety-tips">
+                <h3>🔒 安全存储建议：</h3>
+                <ul>
+                    <li>使用密码管理器存储</li>
+                    <li>不要明文存储在任何文档中</li>
+                    <li>定期更换重要账户密码</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

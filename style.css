@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --background-color: #f5f6fa;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.config-panel {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.advanced-options {
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+button#generateBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button#generateBtn:hover {
+    background-color: #2980b9;
+}
+
+.password-display {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.password-display input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.copy-btn {
+    padding: 12px 20px;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.strength-meter {
+    margin: 25px 0;
+}
+
+.strength-bar {
+    height: 10px;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.strength-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--danger-color);
+    transition: width 0.3s ease;
+}
+
+.strength-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    color: #666;
+}
+
+.safety-tips {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+}
