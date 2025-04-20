@@ -40,4 +40,5 @@ graph TD
 ## 其他说明
 这是一个测试项目，主要是测试AI编写网页的能力，和code-server端口转发的能力。
 
-测试Cloudflare Pages重新构建能力
+## Cloudflare Pages
+经过测试，能够在Cloudflare Pages上自动构建。
